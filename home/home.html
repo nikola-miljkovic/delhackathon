@@ -1,0 +1,118 @@
+<!--<div id="ex3">
+  <span class="p1 fa-stack fa-5x has-badge" data-count="3">
+    <i class="p2 fa fa-circle fa-stack-2x"></i>
+    <i class="p3 fa fa-shopping-cart fa-stack-1x fa-inverse" data-count="5"></i>
+  </span>
+</div>
+
+<div id="ex2">
+  <span class="fa-stack fa-5x has-badge" data-count="2">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+  </span>
+</div>
+
+<div id="ex1">
+    <i class="fa fa-envelope fa-5x fa-border icon-grey badge"></i>
+</div>-->
+
+
+
+
+<!--
+<div class="row gray_row text-center">
+    <h2 id="h2Title">{{title}}</h2>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-2">
+            <button ng-click="addNew()" class="btn btn-lg" id="btnMarginBottom">Add new contact</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-5">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Full name
+                        </th>
+                        <th>
+                            Options
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="name in contacts">
+                        <td ng-click="details(name)" id="clicableData">{{name.Name}}</td>
+                        <td>
+                            <ul class="list-inline">
+                                <li><button ng-click="edit(name)" class="btn btn-xs btn-primary" title="Edit"><i class="fas fa-edit"></i></button></li>
+                                <li><button ng-click="details(name)" class="btn btn-xs btn-primary" title="Details"><i class="fas fa-info-circle"></i></button> </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="details">
+        <contact-details Id="{{Id}}" contact="{{contact}}" ng-if="loaded == true""></contact-details>
+    </div>
+</div>-->
+
+<!--<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input id="scanner_input" class="form-control" placeholder="Click the button to scan an EAN..." type="text" />
+      <span class="input-group-btn">
+				<button class="btn btn-default" type="button" data-toggle="modal" data-target="#livestream_scanner">
+					<i class="fa fa-barcode"></i>
+				</button>
+			</span>
+    </div>&lt;!&ndash; /input-group &ndash;&gt;
+  </div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;
+</div>&lt;!&ndash; /.row &ndash;&gt;
+<div class="modal" id="livestream_scanner">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Barcode Scanner</h4>
+      </div>
+      <div class="modal-body" style="position: static">
+        <div id="interactive" class="viewport"></div>
+        <div class="error"></div>
+      </div>
+      <div class="modal-footer">
+        <label class="btn btn-default pull-left">
+          <i class="fa fa-camera"></i> Use camera app
+          <input type="file" accept="image/*;capture=camera" capture="camera" class="hidden" />
+        </label>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>&lt;!&ndash; /.modal-content &ndash;&gt;
+  </div>&lt;!&ndash; /.modal-dialog &ndash;&gt;
+</div>&lt;!&ndash; /.modal &ndash;&gt;-->
+<div class="row">
+    <div class="col-xs-4">
+        <button class="btn primaryCollor categoriesBut">KATEGORIJE</button>
+    </div>
+    <div class="col-xs-4">
+        <input id="heightInput" class="width_100" type="text" placeholder=" Pretraga...">
+    </div>
+    <div class="col-xs-4">
+        <button ng-click="scan()" class="btn categoriesBut width_100"><i class="fas fa-barcode"></i></button>
+    </div>
+</div>
+
+
+
+
+<p>Barcode: <span class="found"></span></p>
+<div id="interactive" class="viewport"></div>
+
+

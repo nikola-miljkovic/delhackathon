@@ -1,0 +1,217 @@
+/*
+input{
+    width: 100%;
+}
+#clicableData{
+    cursor: pointer;
+    padding-right: 40px;
+}
+.details{
+    position: fixed;
+    top: 120px;
+    left: 700px;
+}
+#btnMarginBottom{
+    margin-bottom: 30px;
+}
+tr>td:hover{
+    opacity: 0.7;
+}
+.gray_row{
+    background-color: #5F5F5F;
+    margin-bottom: 10px;
+}
+#h2Title{
+    color: whitesmoke;
+}
+.border{
+    border: 1px solid #5F5F5F;
+    padding: 20px 40px;
+    border-radius: 10px;
+}*/
+
+#ex4 .p1[data-count]:after{
+    position:absolute;
+    right:10%;
+    top:8%;
+    content: attr(data-count);
+    font-size:40%;
+    padding:.2em;
+    border-radius:50%;
+    line-height:1em;
+    color: white;
+    background:rgba(255,0,0,.85);
+    text-align:center;
+    min-width: 1em;
+//font-weight:bold;
+}
+
+
+#ex3 .fa-stack[data-count]:after{
+    position:absolute;
+    right:0%;
+    top:1%;
+    content: attr(data-count);
+    font-size:30%;
+    padding:.6em;
+    border-radius:50%;
+    line-height:.8em;
+    color: white;
+    background:rgba(255,0,0,.85);
+    text-align:center;
+    min-width: 1em;
+    font-weight:bold;
+}
+
+
+/* on ex2 if you include bootstrap v3 css the number is a rounded circle with the .has-badge class */
+#ex2 .fa-stack[data-count]:after{
+    position:absolute;
+    right:0%;
+    top:1%;
+    content: attr(data-count);
+    font-size:30%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    background:rgba(255,0,0,.85);
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+}
+
+
+
+
+#ex1 .icon-grey {color: grey}
+#ex1 i {
+    width:100px;
+    text-align:center;
+    vertical-align:middle;
+    position: relative;
+}
+#ex1 .badge:after{
+    content:"100";
+    position: absolute;
+    background: rgba(0,0,255,1);
+    height:2rem;
+    top:1rem;
+    right:1.5rem;
+    width:2rem;
+    text-align: center;
+    line-height: 2rem;;
+    font-size: 1rem;
+    border-radius: 50%;
+    color:white;
+    border:1px solid blue;
+}
+
+
+#interactive.viewport {position: relative; width: 100%; height: auto; overflow: hidden; text-align: center;}
+#interactive.viewport > canvas, #interactive.viewport > video {max-width: 100%;width: 100%;}
+canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
+
+
+.primaryCollor{
+    background-color: #FF5801;
+    color: whitesmoke;
+}
+.mg_b5{
+    margin-bottom: 5px;
+}
+.mgt_10{
+    margin-top: 10px;
+}
+.categoriesBut{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+#main{
+    margin-top: 20px;
+}
+.quaggaDisplayNone{
+    display: none;
+}
+.displayIfProduct{
+    display: none;
+}
+#heightInput{
+    height: 34px;
+    border-radius: 5px;
+}
+.faceButton{
+    background-color: #3B5998;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px 2px;
+    width: 33%;
+}
+.googleButton{
+    background-color: #DB3236;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px 2px;
+    width: 32%;
+}
+.twitterButton{
+    background-color: #00ACED;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px 2px;
+    width: 31%;
+}
+.width_100{
+    width: 100%;
+}
+/*mobile menu*/
+.navbar-inverse , .navbar-toggle{
+    background-color: #FF5801!important;
+    border-color: whitesmoke!important;
+}
+.navbar-nav>li>a{
+    color: whitesmoke!important;
+}
+.p3{
+    color: whitesmoke;
+}
+#amounthStyle{
+    margin-top: 18px;
+    margin-right: 10px;
+    margin-left: 7px;
+    color: whitesmoke;
+}
+body {
+    padding-top: 50px;
+    position: relative;
+    background-color: #E7E6E6!important;
+}
+
+pre {
+    tab-size: 8;
+}
+
+@media screen and (max-width: 768px) {
+    .side-collapse-container{
+        width:100%;
+        position:relative;
+        left:0;
+        transition:left .4s;
+    }
+    .side-collapse-container.out{
+        left:200px;
+    }
+    .side-collapse {
+        top:50px;
+        bottom:0;
+        left:0;
+        width:200px;
+        position:fixed;
+        overflow:hidden;
+        transition:width .4s;
+    }
+    .side-collapse.in {
+        width:0;
+    }
+}

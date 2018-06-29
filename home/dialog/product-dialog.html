@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h4>{{product.category}}</h4>
+</div>
+<div class="modal-body">
+<div class="row displayIfProduct" id="ifProduct">
+     <div class="col-xs-12">
+         <div class="card" style="width: 18rem;">
+             <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+
+             <div class="card-body">
+
+             rd-title">{{product.productName}}</h5>
+                 <p class="card-text">{{product.description}}</p>
+                 <a href="#" class="btn btn-primary">Ubaci u korpu</a>
+             </div>
+         </div>
+     </div>
+ </div>
+</div>
+<div class="modal-footer">
+    <button ng-click="pushToChart()" class="btn btn-success">Ubaci u korpu</button>
+    <button ng-click="close()" class="btn btn-default">Odustani</button>
+</div>
