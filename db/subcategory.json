@@ -1,0 +1,17 @@
+{"_id":{"$oid":"5b37ab70d81b99d70370bc21"},"CategoryName":"Piće, kafa i čaj","SubCategoryName":"Pivo"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc22"},"CategoryName":"Piće, kafa i čaj","SubCategoryName":"Kafa"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc23"},"CategoryName":"Čokolade, keks, slane i slatke grickalice","SubCategoryName":"Slani konditori"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc24"},"CategoryName":"Osnovne namirnice","SubCategoryName":"Šećer"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc25"},"CategoryName":"Osnovne namirnice","SubCategoryName":"Brašn "}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc26"},"CategoryName":"Osnovne namirnice","SubCategoryName":"Testenine"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc27"},"CategoryName":"Zdrava i dijetalna hrana ","SubCategoryName":"Bezglutenski proizvodi"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc28"},"CategoryName":"Zdrava i dijetalna hrana ","SubCategoryName":"Organska hrana"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc29"},"CategoryName":"Čokolade, keks, slane i slatke grickalice","SubCategoryName":"Šećerni proizvodi"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc2a"},"CategoryName":"Čokolade, keks, slane i slatke grickalice","SubCategoryName":"Keks"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc2b"},"CategoryName":"Voće i povrće","SubCategoryName":"Sveže povrće"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc2c"},"CategoryName":"Voće i povrće","SubCategoryName":"Sveže voće"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc2d"},"CategoryName":"Smrznuti proizvodi","SubCategoryName":"Smrznuto povrće"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc2e"},"CategoryName":"Voće i povrće","SubCategoryName":"Organsko voće i povrće"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc2f"},"CategoryName":"Smrznuti proizvodi","SubCategoryName":"Smrznuta riba"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc30"},"CategoryName":"Mleko, mlečni proizvodi i jaja","SubCategoryName":"Mleko"}
+{"_id":{"$oid":"5b37ab70d81b99d70370bc31"},"CategoryName":"Kućna hemija","SubCategoryName":"Deterdženti"}
