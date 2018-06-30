@@ -174,8 +174,6 @@
             });
         });
 */
-      $("#hidden").removeClass("hidden");
-      $scope.ifProduct = true;
 
       $scope.scan = function () {
           Quagga.init({

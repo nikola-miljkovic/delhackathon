@@ -20,6 +20,11 @@
                     controller : 'LogInController',
                     templateUrl : 'pages/log-in/log-in.html'
                 })
+            .when('/location',
+                {
+                    controller : 'LocationController',
+                    templateUrl : 'pages/location/location.html'
+                })
             .when('/signin',
                 {
                     controller : 'SignInController',

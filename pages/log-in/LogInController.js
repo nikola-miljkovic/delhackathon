@@ -22,6 +22,18 @@ function ctrl($scope, $routeParams, $location, $uibModal, $route, toastr) {
             $(sel).toggleClass('in');
             $(sel2).toggleClass('out');
         });
+
+        $("#fadeIn").addClass("displayInline");
+        function myFunction() {
+            setTimeout(function(){
+                $("#fadeIn").removeClass("displayInline");
+                $("#fadeIn").addClass("displayNone");
+            }, 3000);
+        }
+        myFunction()
+
     });
+
+
 
 }
