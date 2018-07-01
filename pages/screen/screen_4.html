@@ -2,7 +2,7 @@
 
 <header role="banner" class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
-        <div class="navbar-header" id="ex4">
+        <div class="navbar-header" ng-click="goOnSix('/screen_6')" id="ex4">
             <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 
             <small class="pull-right" id="amounthStyle">Vas racun: {{totalCheck}} rsd</small>
@@ -52,30 +52,7 @@
     </div>
 </div>
 
-<div ng-if="products">
-<!--    <div class="col-xs-12">
-        <div ng-repeat="product in products" class="productBox">
-            <img ng-click="descriptionOpen('/screen_1')" class="productImage" src="{{product.img}}">
-            <h4>{{product.name}}</h4>
-            <small>{{product.neto}}</small>
-            <p>{{product.price}} rsd</p>
-            <p>{{product.description}}</p>
-            <button ng-click="pushToChart()" class="btn btn-success">Ubaci u korpu</button>
-            <div id="ifDescription">
+<img id="click" ng-click="goOnSix('/screen_6')" class="imgFake" src="resources/images/screen/001.png" />
 
-            </div>
-        </div>
-    </div>-->
-    <img ng-click="descriptionOpen('/screen_1')" class="imgFake" src="resources/images/screen/001.png">
-</div>
 
-<div id="categoryPlace" ng-click="openPodCat()">
-
-</div>
-
-<div id="ifFirst">
-    <img src="resources/images/home-1.png" class="homeFirstView" />
-    <h4 class="mgL_10">Recepti</h4>
-    <img src="resources/images/home-2.png" class="homeFirstView_1" />
-</div>
 

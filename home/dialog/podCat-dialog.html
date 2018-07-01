@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4>Zdrava i dijetalna hrana</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-condensed">
+                <thead>
+                <tr class="center">
+                    <th>Podkategorije</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="center" ng-repeat="m in subCategories">
+                    <td class="clicable" ng-click="pickPodcat(item)">{{ m.SubCategoryName }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button ng-click="close()" class="btn btn-default">Odustani</button>
+</div>

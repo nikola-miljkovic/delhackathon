@@ -16,8 +16,16 @@ subCategorySchema.statics.findByCategory = function(category, cb) {
 }
 var SubCategory = mongoose.model('SubCategorySchema', subCategorySchema)
 
+var articleSchema = new Schema({
+    "Product": ObjectId,
+    "UserId": Number,
+    "Quantity": Number,
+}, { strict: false, collection: 'subcategory', })
+var Article = mongoose.model('Article', articleSchema);
+
 export {
   Product,
   Category,
   SubCategory,
+  Article,
 }

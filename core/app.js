@@ -5,5 +5,7 @@
          'ngAnimate',
          'ui.bootstrap',
          'toastr',
+         'ngResource',
+         'base64',
      ]);
 

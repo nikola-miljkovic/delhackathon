@@ -10,170 +10,17 @@
     function ctrl($scope, $routeParams, $filter, $location, $uibModal, $route, toastr, ProductService) {
 
      /*   var openToast=[];*/
-      /*alert("zika");*/
+
+    $scope.valueOfProduct = 0;
+    $scope.totalCheck = 0;
 
 
-      /*  $scope.addNew = function () {
-            $scope.openDialog();
+        $scope.descriptionOpen = function (path) {
+            $location.path(path);
         };
-        $scope.edit = function (contact) {
-            $scope.openDialog(contact)
-        }
-        $scope.openDialog = function (contact) {
-            var dialogOpts = {
-                backdrop: 'static',
-                keyboard: true,
-                backdropClick: false,
-                templateUrl: 'home/dialog/product-dialog.html',
-                controller: 'AddNewEditDialogController',
-                resolve: {
-                    editContact: function () {
-                        return angular.copy(contact);
-                    }
-                }
-            }
-            var dialog = $uibModal.open(dialogOpts);
-
-            dialog.result.then(
-                function (dialogItem) {
-                    if (dialogItem.Id){
-                        openToast.push(toastr.success("Updated contact"))
-
-                        // DataService.updateContact(dialogItem).then(function (response) {
-                        //     // do something
-                        // },
-                        //     function (error) {
-                        //     //do something
-                        //     }
-                        //     )
-                    }
-                    else
-                        openToast.push(toastr.success("Created a new contact"))
-                    // DataService.addNewContact(dialogItem).then(function (response) {
-                    //     // do something
-                    // },
-                    //     function (error) {
-                    //     // do something
-                    //     }
-                    //     )
-                }
-            )
-        };
-        $scope.details = function(oneContact){
-          $scope.contact = oneContact;
-          $scope.Id = oneContact.Id;
-            $scope.loaded = true;
-            // $route.reload();
-        }*/
-
-
-      /*  $(function() {
-            // Create the QuaggaJS config object for the live stream
-            var liveStreamConfig = {
-                inputStream: {
-                    type : "LiveStream",
-                    constraints: {
-                        width: {min: 640},
-                        height: {min: 480},
-                        aspectRatio: {min: 1, max: 100},
-                        facingMode: "environment" // or "user" for the front camera
-                    }
-                },
-                locator: {
-                    patchSize: "medium",
-                    halfSample: true
-                },
-                numOfWorkers: (navigator.hardwareConcurrency ? navigator.hardwareConcurrency : 4),
-                decoder: {
-                    "readers":[
-                        {"format":"ean_reader","config":{}}
-                    ]
-                },
-                locate: true
-            };
-            // The fallback to the file API requires a different inputStream option.
-            // The rest is the same
-            var fileConfig = $.extend(
-                {},
-                liveStreamConfig,
-                {
-                    inputStream: {
-                        size: 800
-                    }
-                }
-            );
-            // Start the live stream scanner when the modal opens
-            $('#livestream_scanner').on('shown.bs.modal', function (e) {
-                Quagga.init(
-                    liveStreamConfig,
-                    function(err) {
-                        if (err) {
-                            $('#livestream_scanner .modal-body .error').html('<div class="alert alert-danger"><strong><i class="fa fa-exclamation-triangle"></i> '+err.name+'</strong>: '+err.message+'</div>');
-                            Quagga.stop();
-                            return;
-                        }
-                        decoder : {
-                            readers : ["code_128_reader"]
-                        }
-                        Quagga.start();
-                    }
-                );
-            });
-
-
-            // Make sure, QuaggaJS draws frames an lines around possible
-            // barcodes on the live stream
-            Quagga.onProcessed(function(result) {
-                var drawingCtx = Quagga.canvas.ctx.overlay,
-                    drawingCanvas = Quagga.canvas.dom.overlay;
-
-                if (result) {
-                    if (result.boxes) {
-                        drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
-                        result.boxes.filter(function (box) {
-                            return box !== result.box;
-                        }).forEach(function (box) {
-                            Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, drawingCtx, {color: "green", lineWidth: 2});
-                        });
-                    }
-
-                    if (result.box) {
-                        Quagga.ImageDebug.drawPath(result.box, {x: 0, y: 1}, drawingCtx, {color: "#00F", lineWidth: 2});
-                    }
-
-                    if (result.codeResult && result.codeResult.code) {
-                        Quagga.ImageDebug.drawPath(result.line, {x: 'x', y: 'y'}, drawingCtx, {color: 'red', lineWidth: 3});
-                    }
-                }
-            });
-
-            // Once a barcode had been read successfully, stop quagga and
-            // close the modal after a second to let the user notice where
-            // the barcode had actually been found.
-            Quagga.onDetected(function(result) {
-                if (result.codeResult.code){
-                    $('#scanner_input').val(result.codeResult.code);
-                    Quagga.stop();
-                    setTimeout(function(){ $('#livestream_scanner').modal('hide'); }, 1000);
-                }
-            });
-
-            // Stop quagga in any case, when the modal is closed
-            $('#livestream_scanner').on('hide.bs.modal', function(){
-                if (Quagga){
-                    Quagga.stop();
-                }
-            });
-
-            // Call Quagga.decodeSingle() for every file selected in the
-            // file input
-            $("#livestream_scanner input:file").on("change", function(e) {
-                if (e.target.files && e.target.files.length) {
-                    Quagga.decodeSingle($.extend({}, fileConfig, {src: URL.createObjectURL(e.target.files[0])}), function(result) {alert(result.codeResult.code);});
-                }
-            });
-        });
-*/
+      /*  $scope.descriptionOpen = function () {
+            document.getElementById('ifDescription').innerHTML = '<img class="categoryItemImg" src="resources/images/aditionalData.png" />';
+        };*/
 
       $scope.scan = function () {
           Quagga.init({
@@ -204,25 +51,8 @@
               document.querySelector(".found").innerHTML = code;
               Quagga.stop();
               $("#interactive").addClass("quaggaDisplayNone")
-             /* ProductService.getProductByCode(code).then(function (result) {
 
-                  $scope.product = result.data;
-                  alert($scope.product.category);
 
-              },
-                  function (error) {
-                    toastr.warning("Neuspesno ocitavanje barkoda, ponovite ocitavanje");
-                  }
-                  )*/
-             $scope.product = ProductService.getProductByCode();
-              $("#ifProduct").removeClass("displayIfProduct")
-              console.log("proizvod", $scope.product)
-
-           /*   var product = $scope.product[0];*/
-                $scope.openDialogProduct = function () {
-                    $scope.openDialog($scope.product[0]);
-                }
-                $scope.openDialogProduct();
           });
       };
 
@@ -270,6 +100,50 @@
             )
         };
 
+    /*    function GetCategoryType() {
+            $scope.items = ProductService.getCategoryGroup();
+        }
+        GetCategoryType();*/
+
+        $scope.podCat = ProductService.getSubCatByCategory();
+
+      $scope.openCatagory = function () {
+          $("#ifFirst").remove();
+          document.getElementById('categoryPlace').innerHTML = '<ul class="listOfCategory"><li ng-click="openPodCat()"><img class="categoryItemImg" src="resources/images/categoryImg/k01.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k02.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k03.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k04.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k05.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k06.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k07.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k08.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k09.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k10.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k11.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k12.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k13.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k14.png" /></li><li><img class="categoryItemImg" src="resources/images/categoryImg/k15.png" /></li></ul>';
+      };
+
+        $scope.openPodCat = function () {
+            $scope.openDialogPdkat();
+        };
+
+        $scope.openDialogPdkat = function (podCat) {
+            var dialogOpts = {
+                backdrop: 'static',
+                keyboard: true,
+                backdropClick: false,
+                templateUrl: 'home/dialog/podCat-dialog.html',
+                controller: 'PodCatDialogController',
+                resolve: {
+                    podCat: function () {
+                        return angular.copy(podCat);
+                    }
+                }
+            }
+
+            var dialog = $uibModal.open(dialogOpts);
+
+            dialog.result.then(
+                function () {
+
+                    $scope.products =    ProductService.getProductBySubCat()/*.then(function (result) {
+                        $scope.products = result.data;
+                        console.log("proizvodi", $scope.products)
+                    });*/
+                }
+            )
+        };
+
+
         /*menu nav*/
         $(document).ready(function() {
             var sideslider = $('[data-toggle=collapse-side]');
@@ -280,4 +154,15 @@
                 $(sel2).toggleClass('out');
             });
         });
+
+
+        $scope.getCategory = function () {
+
+            ProductService.getCat().then(function (response) {
+                var doc = response.data;
+                console.log("test za api", doc);
+            })
+        };
+        $scope.getCategory();
     }
+    /*  var doc =  ProductService.getCat();*/

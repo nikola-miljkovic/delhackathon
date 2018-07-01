@@ -128,6 +128,12 @@ canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
     margin-right: 5px;
     border-radius: 5px;
 }
+.center{
+    text-align: center;
+}
+.clicable{
+    cursor: pointer;
+}
 #main{
     margin-top: 20px;
 }
@@ -142,6 +148,9 @@ canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
 }
 .fadeOut{
     display: none;
+}
+.productImageDialog{
+    width: 170px;
 }
 .quaggaDisplayNone{
     display: none;
@@ -162,11 +171,55 @@ canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
     width: 240px;
     margin-top: 100px;
 }
+.productImage{
+    width: 130px;
+    margin-top: 10px;
+}
+.screen_1Img{
+    width: 374px;
+}
+.imgFake{
+    width: 400px;
+}
+.jbnSLika{
+    width: 343px;
+}
 .mapImg{
     height: 542px;
     width: 400px;
     position: absolute;
     top: 0;
+}
+.homeFirstView{
+     width: 400px;
+     height: 270px;
+ }
+.homeFirstView_1{
+    width: 400px;
+    height: 135px;
+    margin-bottom: 40px;
+}
+.listOfCategory>li{
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+.listOfCategory>li:hover{
+    opacity: 0.6;
+}
+.listOfCategory>li:last-child{
+    margin-bottom: 5px;
+}
+.listOfCategory{
+    padding-left: 5px;
+    background-color: #FF5801;
+}
+.categoryItemImg{
+    width: 120px;
+}
+.mgL_10{
+    margin-left: 10px;
 }
 .faceButton{
     background-color: #3B5998;
